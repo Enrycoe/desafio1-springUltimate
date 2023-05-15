@@ -37,7 +37,7 @@ public class Aula1Application implements CommandLineRunner{
 		System.out.print("O valor total do pedido é: R$" + String.format("%.2f", orderService.total(o1)));
 		
 				
-		
+		 
 	}
 
 }

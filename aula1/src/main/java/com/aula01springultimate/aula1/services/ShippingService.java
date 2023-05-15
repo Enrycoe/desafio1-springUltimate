@@ -7,7 +7,6 @@ import com.aula01springultimate.aula1.entities.Order;
 @Service
 public class ShippingService {
 
-
 	
 	public double shipment (Order order) {
 		if(order.getBasic() < 100) {
