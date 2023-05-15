@@ -8,14 +8,14 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import com.aula01springultimate.aula1.entities.Order;
-import com.aula01springultimate.aula1.services.ShippingService;
+import com.aula01springultimate.aula1.services.OrderService;
 
 @SpringBootApplication
 public class Aula1Application implements CommandLineRunner{
 	Scanner sc = new Scanner(System.in);
 	
 	@Autowired
-	private ShippingService shippingService;
+	private OrderService orderService;
 	
 	public static void main(String[] args) {
 		SpringApplication.run(Aula1Application.class, args);
@@ -34,7 +34,7 @@ public class Aula1Application implements CommandLineRunner{
 		
 		System.out.print("O código do pedido é: " + o1.getCode());
 		System.out.println();
-		System.out.print("O valor total do pedido é: R$" + String.format("%.2f", shippingService.shipment(o1)));
+		System.out.print("O valor total do pedido é: R$" + String.format("%.2f", orderService.total(o1)));
 		
 				
 		
